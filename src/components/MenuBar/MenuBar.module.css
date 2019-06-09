@@ -1,0 +1,151 @@
+@value primary: #16A8F0;
+
+
+.wrapper {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  bottom: 0;
+}
+
+.menuBar {
+  width: 100%;
+  height: 100px;
+  background: white;
+  box-shadow: 0 0 40px 20px color(black a(10%));
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+.settings {
+  display: flex;
+}
+
+.settingsGroup {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+
+  .left, .right {
+    display: flex;
+  }
+
+  &:not(:last-child) {
+    margin-right: 4rem;
+  }
+}
+
+.menuButton {
+  composes: menuButton from '../../styles/libs.css';
+}
+
+.setting {
+  display: flex;
+  flex-wrap: wrap;
+  height: 40px;
+
+  &:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  .isDisabled {
+    pointer-events: none;
+    opacity: .4;
+    cursor: inherit;
+  }
+
+  .label {
+    width: 100%;
+    margin-bottom: .35rem;
+  }
+
+  .content {
+    display: flex;
+  }
+}
+
+.value {
+  position: relative;
+  margin-right: .4rem;
+}
+
+.change {
+  position: relative;
+  top: .1rem;
+  margin-left: .4rem;
+}
+
+.add, .remove {
+  composes: menuButton;
+
+  &:not(:last-child) {
+    margin-right: .8rem;
+  }
+}
+
+.tool {
+  opacity: .6;
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &.isActive {
+    opacity: 1;
+    cursor: inherit;
+
+    .toolButton {
+      cursor: inherit;
+
+      &:hover {
+        color: primary;
+      }
+    }
+  }
+}
+
+.toolButton {
+  composes: menuButton;
+}
+
+.waveType {
+  margin-right: 8rem;
+  border: 1px solid color(black a(10%));
+  border-radius: 50%;
+
+  &:hover {
+    background-color: color(black a(6%));
+  }
+
+  .icon {
+    width: 5rem;
+    height: 5rem;
+    background-size: 70% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.tempoWrapper {
+  width: 160px;
+}
+
+.tempoValue {
+  position: relative;
+  top: -.6rem;
+  left: .6rem;
+}
+
+.playWrapper {}
+
+.playButton {
+  composes: menuButton;
+  font-size: 5rem;
+}

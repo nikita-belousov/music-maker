@@ -1,0 +1,75 @@
+@value primary: #16A8F0;
+@value menu-size: 4.2rem;
+
+
+.selector {
+
+  .background {
+    display: flex;
+    align-items: center;
+    width: menu-size;
+    height: menu-size;
+    border: 1px solid color(black a(7%));
+    border-radius: 50vh;
+    transition: width .2s ease-out;
+    overflow: hidden;
+
+    &:hover {
+      background-color: color(black a(6%));
+    }
+  }
+
+  .arrows {
+    min-width: calc(menu-size * 5);
+    flex-wrap: nowrap;
+  }
+}
+
+.control {
+  background: 0;
+  border: 0;
+  width: calc(menu-size * .6);
+  height: calc(menu-size * .6);
+  background: primary;
+  color: white;
+  outline: 0;
+  border-radius: 50vh;
+  margin-left: calc(menu-size * .2);
+  font-size: calc(menu-size * .32);
+
+  &:hover {
+    background-color: color(primary tint(30%));
+  }
+
+  &:first-child {
+    margin-left: calc(menu-size * .4);
+  }
+
+  &:last-child {
+    margin-left: calc(menu-size * .4);
+  }
+}
+
+.selectorActive {
+
+  .background {
+    width: calc(menu-size * 5.2);
+    background: color(black a(7%));
+    border-color: transparent;
+  }
+}
+
+.toggler {
+  position: relative;
+  left: calc(menu-size * .18);
+  min-width: calc(menu-size * .6);
+  height: calc(menu-size * .6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(menu-size * .6);
+  background: 0;
+  border: 0;
+  outline: 0;
+  color: primary;
+}

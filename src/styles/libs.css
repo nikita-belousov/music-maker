@@ -1,0 +1,14 @@
+@value primary: #16A8F0;
+
+
+.menuButton {
+  background: 0;
+  border: 0;
+  outline: 0;
+  color: primary;
+  cursor: inherit;
+
+  &:hover {
+    color: color(primary tint(30%));
+  }
+}

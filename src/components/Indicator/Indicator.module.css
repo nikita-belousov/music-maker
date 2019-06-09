@@ -1,0 +1,5 @@
+.cell {
+  position: absolute;
+  height: 24px;
+  background-color: color(black a(5%));
+}

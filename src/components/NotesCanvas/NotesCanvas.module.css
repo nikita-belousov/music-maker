@@ -1,0 +1,14 @@
+.notePicker {
+  position: relative;
+  /*  100px = menuBar height */
+  height: calc(100vh - 100px);
+  overflow-y: scroll;
+
+  &.isBrush {
+    cursor: url(../../assets/images/cursors/brush-cursor.png), auto;
+  }
+
+  &.isEraser {
+    cursor: url(../../assets/images/cursors/eraser-cursor.png), auto;
+  }
+}

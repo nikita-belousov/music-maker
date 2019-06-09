@@ -1,0 +1,58 @@
+/* FIXME: выяснинть почему color-function
+не работает с импортированной переменной */
+@value primary: #16A8F0;
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 100%;
+  user-select: none;
+  position: relative;
+}
+
+.bars, .bar, .beat, .row {
+  display: flex;
+}
+
+.row {
+  &:hover .noteName {
+    color: primary;
+  }
+}
+
+.noteName {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: color(primary a(60%));
+}
+
+.bars, .bar, .beat, .cell {
+  flex-grow: 1;
+}
+
+.bar:nth-child(2n) {
+  background: color(primary a(10%));
+}
+
+.bar:not(:last-child) {
+  border-right: 2px solid color(primary a(60%));
+}
+
+.beat:not(:last-child) {
+  border-right: 2px solid color(primary a(60%));
+}
+
+.cell {
+  height: 24px;
+  border-bottom: 1px solid color(primary a(30%));
+
+  &:not(:last-child) {
+    border-right: 1px solid color(primary a(30%));
+  }
+}

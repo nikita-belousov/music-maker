@@ -1,0 +1,16 @@
+@value primary: #16A8F0;
+
+
+.notes {}
+
+.note {
+  position: absolute;
+  z-index: 20;
+  /* same as cell grid height */
+  height: 24px;
+  background-color: primary;
+
+  &:not(.isBrush):hover {
+    background-color: color(primary tint(30%))
+  }
+}
